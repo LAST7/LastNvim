@@ -1,7 +1,7 @@
 -- import lualine plugin safely
 local status, lualine = pcall(require, "lualine")
 if not status then
-	return
+    return
 end
 
 --[[
@@ -36,8 +36,8 @@ local lualine_palenight = require("lualine.themes.palenight")
 
 -- configure lualine with modified theme
 lualine.setup({
-	options = {
-		icons_enabled = true,
-		theme = lualine_palenight,
-	},
+    options = {
+        icons_enabled = true,
+        theme = lualine_palenight,
+    },
 })
