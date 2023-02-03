@@ -1,9 +1,10 @@
 -- import lualine plugin safely
 local status, lualine = pcall(require, "lualine")
 if not status then
-  return
+	return
 end
 
+--[[
 -- get lualine nightfly theme
 local lualine_nightfly = require("lualine.themes.nightfly")
 
@@ -29,10 +30,14 @@ lualine_nightfly.command = {
     fg = new_colors.black, -- black
   },
 }
+]]
+
+local lualine_palenight = require("lualine.themes.palenight")
 
 -- configure lualine with modified theme
 lualine.setup({
-  options = {
-    theme = lualine_nightfly,
-  },
+	options = {
+		icons_enabled = true,
+		theme = lualine_palenight,
+	},
 })
