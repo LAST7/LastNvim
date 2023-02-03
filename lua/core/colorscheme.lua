@@ -2,8 +2,8 @@
 -- in case it isn't installed
 local status, tn = pcall(require, "zephyr")
 if not status then
-	print("Colorscheme not found!") -- print error if colorscheme not installed
-	return
+    print("Colorscheme not found!") -- print error if colorscheme not installed
+    return
 end
 
 --[[

@@ -2,6 +2,7 @@ local opt = vim.opt -- for conciseness
 
 -- line numbers
 opt.number = true -- shows absolute line number on cursor line
+opt.relativenumber = true
 
 -- tabs & indentation
 opt.tabstop = 4 -- 2 spaces for tabs (prettier default)
@@ -31,8 +32,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
 
-
---
 -- UTF-8
 opt.fileencoding = "UTF-8"
 vim.g.encoding = "UTF-8"
@@ -40,10 +39,6 @@ vim.g.encoding = "UTF-8"
 -- remain lines around the cursor
 opt.scrolloff = 8
 opt.sidescrolloff = 8
-
--- relative line number
-opt.number = true
-opt.relativenumber = true
 
 -- show invisible characters
 opt.list = true
@@ -63,5 +58,3 @@ opt.mouse = "a"
 
 -- the reference line on the right side
 opt.colorcolumn = "90"
-
-
