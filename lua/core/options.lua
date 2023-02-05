@@ -18,6 +18,7 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 opt.cursorline = true -- highlight cursorline
 
 -- appearance
+opt.termguicolors = true
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
