@@ -85,6 +85,12 @@ lspconfig["clangd"].setup({
     on_attach = on_attach,
 })
 
+-- configure xml server
+lspconfig["lemminx"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+})
+
 -- configure css server
 lspconfig["cssls"].setup({
     capabilities = capabilities,
