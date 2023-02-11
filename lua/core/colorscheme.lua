@@ -65,6 +65,8 @@ cat.setup({
         treesitter_context = false,
         nvimtree = true,
         markdown = true,
+        lsp_trouble = true,
+        mason = true,
         native_lsp = {
             enable = true,
             virtual_text = {

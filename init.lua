@@ -1,6 +1,6 @@
+require("core.colorscheme")
 require("core.options")
 require("core.keymaps")
-require("core.colorscheme")
 require("plugins-setup")
 require("plugins.comments")
 require("plugins.nvim-tree")
