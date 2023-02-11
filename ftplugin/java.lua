@@ -5,6 +5,7 @@ local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 
 local workspace_dir = "/home/last/.local/share/nvim/jdt-language-server/workspace/" .. project_name
 
+<<<<<<< HEAD
 -- Source: https://sookocheff.com/post/vim/neovim-java-ide/
 -- The on_attach function is used to set key maps after the language server
 -- attaches to the current buffer
@@ -33,11 +34,16 @@ local on_attach = function (client, bufnr)
 
 end
 
+=======
+>>>>>>> 2362fa4a54367347ff4f17a4975c94668024b60c
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
     -- The command that starts the language server
     -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
+<<<<<<< HEAD
     on_attach = on_attach,
+=======
+>>>>>>> 2362fa4a54367347ff4f17a4975c94668024b60c
     cmd = {
 
         -- ~💀~
@@ -102,3 +108,41 @@ local config = {
 -- This starts a new client & server,
 -- or attaches to an existing client & server depending on the `root_dir`.
 require("jdtls").start_or_attach(config)
+<<<<<<< HEAD
+=======
+
+-- I have no idea why things down below wont work.
+-- source: https://blog.csdn.net/lxyoucan/article/details/123448313
+
+--[[
+local current_buff = vim.api.nvim_get_current_buf
+-- after the lsp is attatched to the current buffer
+-- set mappings with the `on_attatch` function
+
+local java_on_attach = function(client, bufnr)
+    local function buf_set_keymap(...)
+        vim.api.nvim_buf_set_keymap(bufnr, ...)
+    end
+    local function buf_set_option(...)
+        vim.api.nvim_buf_set_option(bufnr, ...)
+    end
+
+    -- Enable completion triggered by <c-x><c-o>
+    -- buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
+
+    -- Mappings
+    local opts = { noremap = true, silent = true }
+    -- See `:help vim.lsp.*` for documentation on any of the following functions
+    buf_set_keymap("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+    buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+    buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
+    buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+    buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+    buf_set_keymap("n", "D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
+    -- rename
+    buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+end
+
+java_on_attach(nil, current_buff)
+]]
+>>>>>>> 2362fa4a54367347ff4f17a4975c94668024b60c
