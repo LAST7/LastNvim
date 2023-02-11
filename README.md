@@ -6,7 +6,7 @@ The origin version written by Bryant is at [bryant's nvim tutorial](https://gith
 
 ## Colorscheme
 
-- catppuccin-mocha
+- [catppuccin-mocha](https://github.com/catppuccin/nvim)
 
 ## List of plugins (managed by Packer)
 
