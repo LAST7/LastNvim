@@ -33,14 +33,21 @@ return packer.startup(function(use)
 
     use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
+    --[[
     use({
         "glepnir/zephyr-nvim",
         requires = { "nvim-treesitter/nvim-treesitter", opt = true },
     })
+    ]]
+
+    use({
+        "catppuccin/nvim",
+        as = "catppuccin"
+    })
 
     use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
-    use("szw/vim-maximizer") -- maximizes and restores current window
+    -- use("szw/vim-maximizer") -- maximizes and restores current window
 
     -- essential plugins
     use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
@@ -133,6 +140,14 @@ return packer.startup(function(use)
 
     -- jdtls
     use("mfussenegger/nvim-jdtls")
+
+    -- bufferline
+    use({
+        'akinsho/bufferline.nvim',
+        -- after = "catppuccin",
+        -- tag = "v3.*",
+        requires = 'nvim-tree/nvim-web-devicons'
+    })
 
     if packer_bootstrap then
         require("packer").sync()

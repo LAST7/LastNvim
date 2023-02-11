@@ -71,9 +71,21 @@ keymap.set("n", "<leader>hls", ":HopLineStart<cr>")
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- troubles
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true })
-vim.keymap.set("n", "<leader>xc", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })
-vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true })
-vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
-vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xc", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
+keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
+
+-- bufferline
+keymap.set("n", "<A-b>", "<cmd> enew <CR>") -- new buffer
+keymap.set("n", "<A-h>", "<cmd> BufferLineCyclePrev <CR>") -- nevigate previous buffer
+keymap.set("n", "<A-l>", "<cmd> BufferLineCycleNext <CR>") -- -
+keymap.set("n", "<A-f>", "<cmd> BufferLinePick <CR>") -- close buffer
+keymap.set("n", "<A-o>", "<cmd> bp|sp|bn|bd! <CR>") -- close buffer
+for i = 1, 9 do
+    -- keymap.set("n", "<A-" .. i .. ">", "<cmd>" .. i .. "tabn<CR>")
+    keymap.set("n", "<A-" .. i .. ">", function() require("bufferline").go_to_buffer(i) end)
+end
+
