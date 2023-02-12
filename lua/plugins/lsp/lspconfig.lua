@@ -79,6 +79,12 @@ rt.setup({
     },
 })
 
+-- configure bash server
+lspconfig["bashls"].setup{
+    capabilities = capabilities,
+    on_attach = on_attach,
+}
+
 -- configure cpp clangd
 lspconfig["clangd"].setup({
     capabilities = capabilities,
