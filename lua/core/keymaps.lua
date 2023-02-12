@@ -7,12 +7,14 @@ local keymap = vim.keymap
 -- General Keymaps
 ---------------------
 
--- use ii to exit insert mode, jk recommended
+-- use jj to exit insert mode
 keymap.set("i", "jj", "<ESC>")
 
 -- map H to ^ and L to $
 keymap.set("n", "H", "^")
+keymap.set("v", "H", "^")
 keymap.set("n", "L", "$")
+keymap.set("v", "L", "$")
 
 -- change <C-d> and <C-u> to move 9 lines up/down
 keymap.set("n", "<C-u>", "9k")

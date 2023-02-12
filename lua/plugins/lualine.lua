@@ -39,8 +39,11 @@ local config = {
     options = {
         icons_enabled = true,
         theme = lualine_palenight,
-        component_separators = '|',
+        component_separators = { left = ')', right = '(' },
         section_separators = { left = '', right = '' },
+        -- section_separators = { left = '', right = '' },
+        -- section_separators = { left = '', right = '' },
+        -- section_separators = '|',
     },
     sections = {
         lualine_c = {"filename"},
