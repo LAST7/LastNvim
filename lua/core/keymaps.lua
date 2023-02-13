@@ -18,7 +18,9 @@ keymap.set("v", "L", "$")
 
 -- change <C-d> and <C-u> to move 9 lines up/down
 keymap.set("n", "<C-u>", "9k")
+keymap.set("v", "<C-u>", "9k")
 keymap.set("n", "<C-d>", "9j")
+keymap.set("v", "<C-d>", "9j")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -42,7 +44,8 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 ----------------------
 
 -- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
+-- keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
+-- this plugin has been removed
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
@@ -85,7 +88,7 @@ keymap.set("n", "<A-b>", "<cmd> enew <CR>") -- new buffer
 keymap.set("n", "<A-h>", "<cmd> BufferLineCyclePrev <CR>") -- nevigate previous buffer
 keymap.set("n", "<A-l>", "<cmd> BufferLineCycleNext <CR>") -- -
 keymap.set("n", "<A-f>", "<cmd> BufferLinePick <CR>") -- close buffer
-keymap.set("n", "<A-o>", "<cmd> bp|sp|bn|bd! <CR>") -- close buffer
+keymap.set("n", "<leader>q", "<cmd> bp|sp|bn|bd! <CR>") -- close buffer
 for i = 1, 9 do
     -- keymap.set("n", "<A-" .. i .. ">", "<cmd>" .. i .. "tabn<CR>")
     keymap.set("n", "<A-" .. i .. ">", function() require("bufferline").go_to_buffer(i) end)

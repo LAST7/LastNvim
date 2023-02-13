@@ -4,6 +4,56 @@ if not status then
     return
 end
 
+-- list of parsers
+local parsers = {
+        "c",
+        "cpp",
+        "rust",
+        "json",
+        "java",
+        "javascript",
+        "typescript",
+        "tsx",
+        "yaml",
+        "html",
+        "css",
+        "xml",
+        "markdown",
+        "svelte",
+        "graphql",
+        "bash",
+        "lua",
+        "python",
+        "vim",
+        "dockerfile",
+        "gitignore",
+    }
+
+-- enable the foldmethod
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = vim.fn.join(parsers, ","),
+    -- group = "dotfiles-settings",
+    callback = function ()
+        vim.opt_local.foldexpr = "nvim_treesitter#foldexpr"
+        vim.opt_local.foldmethod = "expr"
+    end,
+    desc = "Set fold method for treesitter",
+})
+
+-- get the treesitter parser for xml
+-- from https://github.com/windwp/nvim-ts-autotag/issues/79
+-- https://github.com/oncomouse/dotfiles/blob/807811cdfa20d75ad4ed3dde16a9e6a239e48760/conf/vim/plugin/nvim-treesitter.lua#L56-L64
+require("nvim-treesitter.parsers").list.xml = {
+    install_info = {
+        url = "https://github.com/Trivernis/tree-sitter-xml",
+        -- the repository here is forked from https://github.com/dorgnarg/tree-sitter-xml
+        files = {"src/parser.c"},
+        generate_requires_npm = true,
+        branch = "main",
+    },
+    filetype = "xml",
+}
+
 -- configure treesitter
 treesitter.setup({
     -- enable syntax highlighting
@@ -16,27 +66,7 @@ treesitter.setup({
     -- enable autotagging (w/ nvim-ts-autotag plugin)
     autotag = { enable = true },
     -- ensure these language parsers are installed
-    ensure_installed = {
-        "c",
-        "cpp",
-        "rust",
-        "json",
-        "java",
-        "javascript",
-        "typescript",
-        "tsx",
-        "yaml",
-        "html",
-        "css",
-        "markdown",
-        "svelte",
-        "graphql",
-        "bash",
-        "lua",
-        "vim",
-        "dockerfile",
-        "gitignore",
-    },
+    ensure_installed = parsers,
     -- auto install above language parsers
     auto_install = true,
 })
