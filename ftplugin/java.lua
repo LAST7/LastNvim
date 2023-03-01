@@ -12,9 +12,10 @@ local on_attach = function (client, bufnr)
     -- Regular Neovim Lsp client keymappings
     local keymap = vim.keymap
     local bufopts = { noremap=true, silent=true, buffer=bufnr }
-    keymap.set("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", bufopts) -- show definition, references
+    keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", bufopts) -- show definition, references
     keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", bufopts) -- got to declaration
     keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", bufopts) -- see definition and make edits in window
+    keymap.set("n", "gt", "<cmd>Lspsaga goto_definition<CR>", bufopts) -- go to definition
     keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", bufopts) -- go to implementation
     keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", bufopts) -- see available code actions
     keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", bufopts) -- smart rename
@@ -23,7 +24,7 @@ local on_attach = function (client, bufnr)
     keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", bufopts) -- jump to previous diagnostic in buffer
     keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", bufopts) -- jump to next diagnostic in buffer
     keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", bufopts) -- show documentation for what is under cursor
-    keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", bufopts) -- see outline on right hand side
+    keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", bufopts) -- see outline on right hand side
     keymap.set("n", "<leader>tt", "<cmd>Lspsaga term_toggle<CR>", bufopts) -- see outline on right hand side
 
     -- Java extensions provided by jdtls
@@ -79,7 +80,7 @@ local config = {
     -- 💀
     -- This is the default if not provided, you can remove it. Or adjust as needed.
     -- One dedicated LSP server & client will be started per unique root_dir
-    root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew" }),
+    root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew", "pom.xml" }),
 
     -- Here you can configure eclipse.jdt.ls specific settings
     -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request

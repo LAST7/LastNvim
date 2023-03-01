@@ -65,8 +65,8 @@ keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git bra
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
 -- hop cmd
-keymap.set("n", "<leader>hw", ":HopWord<cr>")
-keymap.set("n", "<leader>hww", ":HopWordMW<cr>")
+keymap.set("n", "<leader>hf", ":HopWord<cr>")
+keymap.set("n", "<leader>hff", ":HopWordMW<cr>")
 keymap.set("n", "<leader>hc", ":HopChar2<cr>")
 keymap.set("n", "<leader>hcc", ":HopChar2MW<cr>")
 keymap.set("n", "<leader>hl", ":HopLine<cr>")
@@ -88,7 +88,7 @@ keymap.set("n", "<A-b>", "<cmd> enew <CR>") -- new buffer
 keymap.set("n", "<A-h>", "<cmd> BufferLineCyclePrev <CR>") -- nevigate previous buffer
 keymap.set("n", "<A-l>", "<cmd> BufferLineCycleNext <CR>") -- -
 keymap.set("n", "<A-f>", "<cmd> BufferLinePick <CR>") -- close buffer
-keymap.set("n", "<leader>q", "<cmd> bp|sp|bn|bd! <CR>") -- close buffer
+keymap.set("n", "<A-q>", "<cmd> bp|sp|bn|bd! <CR>") -- close buffer
 for i = 1, 9 do
     -- keymap.set("n", "<A-" .. i .. ">", "<cmd>" .. i .. "tabn<CR>")
     keymap.set("n", "<A-" .. i .. ">", function() require("bufferline").go_to_buffer(i) end)

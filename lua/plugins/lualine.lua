@@ -34,7 +34,7 @@ lualine_nightfly.command = {
 
 local lualine_palenight = require("lualine.themes.palenight")
 
--- got to https://github.com/nvim-lualine/lualine.nvim
+-- go to https://github.com/nvim-lualine/lualine.nvim
 local config = {
     options = {
         icons_enabled = true,

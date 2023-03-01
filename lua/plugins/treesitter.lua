@@ -42,7 +42,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- get the treesitter parser for xml
 -- from https://github.com/windwp/nvim-ts-autotag/issues/79
--- https://github.com/oncomouse/dotfiles/blob/807811cdfa20d75ad4ed3dde16a9e6a239e48760/conf/vim/plugin/nvim-treesitter.lua#L56-L64
+-- https://github.com/oncomouse/dotfiles/blob/catppuccin/conf/vim/plugin/nvim-treesitter.lua
 require("nvim-treesitter.parsers").list.xml = {
     install_info = {
         url = "https://github.com/Trivernis/tree-sitter-xml",
