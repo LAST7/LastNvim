@@ -8,7 +8,7 @@ end
 local parsers = {
         "c",
         "cpp",
-        "rust",
+        -- "r  fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/srcust",
         "json",
         "java",
         "javascript",

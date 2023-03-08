@@ -17,10 +17,10 @@ if not typescript_setup then
 end
 
 -- import rust-tools plugin safely
-local rust_setup, rt = pcall(require, "rust-tools")
+--[[ local rust_setup, rt = pcall(require, "rust-tools")
 if not rust_setup then
     return
-end
+end ]]
 
 local keymap = vim.keymap -- for conciseness
 
@@ -73,12 +73,12 @@ typescript.setup({
 })
 
 -- configure rust server with plugin
-rt.setup({
+--[[ rt.setup({
     server = {
         capabilities = capabilities,
         on_attach = on_attach,
     },
-})
+}) ]]
 
 -- configure bash server
 lspconfig["bashls"].setup{

@@ -1,7 +1,8 @@
+local keymap = vim.keymap
+
 -- set leader key to space
 vim.g.mapleader = " "
-
-local keymap = vim.keymap
+keymap.set("n", "<space>", "<nop>")
 
 ---------------------
 -- General Keymaps
@@ -9,6 +10,9 @@ local keymap = vim.keymap
 
 -- use jj to exit insert mode
 keymap.set("i", "jj", "<ESC>")
+
+-- use U to redo
+keymap.set("n", "U", "<C-r>")
 
 -- map H to ^ and L to $
 keymap.set("n", "H", "^")

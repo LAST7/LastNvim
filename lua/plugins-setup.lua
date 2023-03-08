@@ -106,7 +106,7 @@ return packer.startup(function(use)
     use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
     use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
     use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
-    use("simrat39/rust-tools.nvim") -- rust server
+    -- use("simrat39/rust-tools.nvim") -- rust server
 
     -- formatting & linting
     use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
@@ -143,10 +143,29 @@ return packer.startup(function(use)
 
     -- bufferline
     use({
-        'akinsho/bufferline.nvim',
+        "akinsho/bufferline.nvim",
         -- after = "catppuccin",
-        -- tag = "v3.*",
+        tag = "v3.*",
         requires = 'nvim-tree/nvim-web-devicons'
+    })
+
+    use({
+        "abecodes/tabout.nvim",
+        requires = {"nvim-treesitter"},
+        -- No idea why this line below would shut the plugin down
+        -- after = {"nvim-cmp"}
+    })
+
+    use({
+        "folke/which-key.nvim",
+        config = function ()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup {
+                -- configurations are at
+                -- https://github.com/folke/which-key.nvim
+            }
+        end
     })
 
     if packer_bootstrap then
