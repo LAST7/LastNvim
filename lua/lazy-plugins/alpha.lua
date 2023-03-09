@@ -32,14 +32,18 @@ end
 local function footer()
   local date = os.date("  %d/%m/%Y ")
   local time = os.date("  %H:%M:%S ")
-  local plugins = "  " .. #vim.tbl_keys(require("lazy").plugins()) .. " plugins "
+  -- local stats = require("lazy").stats()
+  -- local plugins = "  " .. stats.count .. " plugins "
 
   local v = vim.version()
   local version = "  v" .. v.major .. "." .. v.minor .. "." .. v.patch
 
-  return date .. time .. plugins .. version
+  return date .. time .. version
 end
 
+
+math.randomseed(os.time())
+local header_color = "AlphaCol" .. math.random(11)
 
 local options = {
   header = {
@@ -48,7 +52,7 @@ local options = {
     -- val = require("custom.tables.headers").banners.sharp,
     opts = {
       position = "center",
-      hl = "AlphaHeader",
+      hl = header_color,
     },
   },
 
@@ -60,9 +64,10 @@ local options = {
       button("SPC r", "  Recent File",  ":Telescope oldfiles<CR>"),
       button("SPC w", "  Find Word",    ":Telescope live_grep<CR>"),
       button("SPC b", "  Bookmarks",    ":Telescope marks<CR>"),
-      button("SPC t", "  Themes",       ":Telescope themes<CR>"),
+      -- button("SPC t", "  Themes",       ":Telescope themes<CR>"),
       button("SPC s", "  Settings",     ":e $MYVIMRC | :cd %:p:h | :split . | :wincmd w | :pwd<CR>"),
       button("SPC q", "  Exit Neovim",  ":qa<CR>"),
+      button("SPC z", "鈴  Lazy", ":Lazy<CR>"),
     },
     opts = { spacing = 1 },
   },
@@ -79,7 +84,7 @@ local options = {
 
 -- options = require("core.utils").load_override(options, "goolord/alpha-nvim")
 
-local padd = vim.fn.max({ 2, vim.fn.floor(vim.fn.winheight(0) * 0.2) })
+local padd = vim.fn.max({ 2, vim.fn.floor(vim.fn.winheight(0) * 0.1) })
 
 return {
     "goolord/alpha-nvim",
@@ -90,33 +95,13 @@ return {
     config = function ()
         require("alpha").setup({
             layout = {
-                options.headerPaddingTop,
+                { type = "padding", val = padd },
                 options.header,
-                options.headerPaddingBottom,
+                { type = "padding", val = 1 },
                 options.buttons,
+                { type = "padding", val = 1 },
                 options.footer,
-              },
-            opts = {
-                setup = function ()
-                    vim.api.nvim_create_autocmd("User", {
-                        pattern = "AlphaReady",
-                        desc = "Disable status and tabline for alpha",
-                        callback = function ()
-                            vim.go.laststatus = 0
-                            vim.opt.showtabline = 0
-                        end,
-                    })
-                    vim.api.nvim_create_autocmd("BufUnload", {
-                        buffer = 0,
-                        desc = "Enable status and tabline after alpha",
-                        callback = function ()
-                            vim.go.laststatus = 3
-                            vim.opt.showtabline = 2
-                        end,
-                    })
-                end,
-                margin = 5,
-            },
+            }
         })
     end,
 }
