@@ -1,9 +1,5 @@
 # Neovim configuration written in lua
 
----
-
-The origin version written by Bryant is at [bryant's nvim tutorial](https://github.com/bryant-video/neovim-tutorial)
-
 ## Colorscheme
 
 - [catppuccin-mocha](https://github.com/catppuccin/nvim)
