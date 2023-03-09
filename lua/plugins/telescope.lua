@@ -10,7 +10,6 @@ if not actions_setup then
   return
 end
 
--- configure telescope
-telescope.setup({})
+telescope.setup()
 
-telescope.load_extension("fzf")
+-- telescope.load_extension("fzf")
