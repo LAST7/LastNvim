@@ -1,8 +1,8 @@
+local config = {}
 
--- enable comment
 return {
     "numToStr/Comment.nvim",
     config = function ()
-        require("Comment").setup()
+        require("Comment").setup(config)
     end
 }

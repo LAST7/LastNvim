@@ -19,7 +19,6 @@ require("lazy").setup("lazy-plugins")
 -- load essential plugins
 require("plugins.nvim-tree")
 require("plugins.lualine")
-require("plugins.telescope")
 require("plugins.nvim-cmp")
 require("plugins.autopairs")
 require("plugins.treesitter")

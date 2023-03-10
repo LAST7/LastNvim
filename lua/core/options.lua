@@ -49,6 +49,7 @@ opt.listchars = "space:·,tab:^I"
 opt.wildmenu = true
 
 -- wait for mappings
+opt.timeout = true
 opt.timeoutlen = 300
 
 -- apply search when typing

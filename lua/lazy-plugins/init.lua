@@ -19,10 +19,6 @@ return {
     -- statusline
     "nvim-lualine/lualine.nvim",
 
-    -- fuzzy finding w/ telescope
-    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }, -- dependency for better sorting performance
-    { "nvim-telescope/telescope.nvim", branch = "0.1.x" }, -- fuzzy finder
-
     -- autocompletion
     "hrsh7th/nvim-cmp", -- completion plugin
     "hrsh7th/cmp-buffer", -- source for text in buffer

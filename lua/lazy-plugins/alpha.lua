@@ -86,6 +86,17 @@ local options = {
 
 local padd = vim.fn.max({ 2, vim.fn.floor(vim.fn.winheight(0) * 0.1) })
 
+local config = {
+    layout = {
+        { type = "padding", val = padd },
+        options.header,
+        { type = "padding", val = 1 },
+        options.buttons,
+        { type = "padding", val = 1 },
+        options.footer,
+    }
+}
+
 return {
     "goolord/alpha-nvim",
     event = "VimEnter",
@@ -93,15 +104,6 @@ return {
         "nvim-tree/nvim-web-devicons",
     },
     config = function ()
-        require("alpha").setup({
-            layout = {
-                { type = "padding", val = padd },
-                options.header,
-                { type = "padding", val = 1 },
-                options.buttons,
-                { type = "padding", val = 1 },
-                options.footer,
-            }
-        })
+        require("alpha").setup(config)
     end,
 }
