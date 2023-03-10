@@ -19,6 +19,7 @@ local parsers = {
         "css",
         "xml",
         "markdown",
+        "markdown_inline",
         "svelte",
         "graphql",
         "bash",

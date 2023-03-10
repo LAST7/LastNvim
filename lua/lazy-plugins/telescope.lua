@@ -11,9 +11,10 @@ local config = {}
 
 return {
     "nvim-telescope/telescope.nvim",
-    verison = "0.1.x",
+    version = "0.1.x",
     config = function ()
         require("telescope").load_extension("fzf")
+        require("telescope").load_extension("notify")
         require("telescope").setup(config)
     end
 }
