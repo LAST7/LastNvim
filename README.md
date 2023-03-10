@@ -4,7 +4,7 @@
 
 - [catppuccin-mocha](https://github.com/catppuccin/nvim)
 
-## List of plugins (managed by Packer)
+## List of plugins (managed by Lazy)
 
 - [Comment](https://github.com/numToStr/Comment.nvim)
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
