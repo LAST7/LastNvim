@@ -1,0 +1,16 @@
+0000000000000000000000000000000000000000 99f89045d13554ebe05f81bcc9bf29da30d33102 LAST7 <last7617@outlook.com> 1676816069 +0800	clone: from https://github.com/LAST7/LastNvim.git
+99f89045d13554ebe05f81bcc9bf29da30d33102 200be3659a7cb64c5aa54fda4ff09b29c1f678a8 LAST7 <last7617@outlook.com> 1677690648 +0800	commit: minor changes
+200be3659a7cb64c5aa54fda4ff09b29c1f678a8 f2561fdfec81b3452338b2347bfd6e8e91f5189d LAST7 <last7617@outlook.com> 1678295759 +0800	commit: tabout,which-key installed
+f2561fdfec81b3452338b2347bfd6e8e91f5189d d3578bf0bb16e9ab354803ef23daff69aa53aba9 LAST7 <last7617@outlook.com> 1678296513 +0800	commit: Modified README.md
+d3578bf0bb16e9ab354803ef23daff69aa53aba9 d3578bf0bb16e9ab354803ef23daff69aa53aba9 LAST7 <last7617@outlook.com> 1678378402 +0800	checkout: moving from main to lazy
+d3578bf0bb16e9ab354803ef23daff69aa53aba9 7af69b6f1b1364d9b2b0cbaffecc940f29894e66 LAST7 <last7617@outlook.com> 1678378473 +0800	commit: **CHANGED PACKER TO LAZY**
+7af69b6f1b1364d9b2b0cbaffecc940f29894e66 ce8b17133ae75a144515250456e0aa198f46913b LAST7 <last7617@outlook.com> 1678380995 +0800	commit: changed README.md
+ce8b17133ae75a144515250456e0aa198f46913b d3578bf0bb16e9ab354803ef23daff69aa53aba9 LAST7 <last7617@outlook.com> 1678380999 +0800	checkout: moving from lazy to main
+d3578bf0bb16e9ab354803ef23daff69aa53aba9 ce8b17133ae75a144515250456e0aa198f46913b LAST7 <last7617@outlook.com> 1678381032 +0800	checkout: moving from main to lazy
+ce8b17133ae75a144515250456e0aa198f46913b cb0769f39859fd0101eb58e787bb5a7fd38a7fe8 LAST7 <last7617@outlook.com> 1678385302 +0800	commit: add alpha
+cb0769f39859fd0101eb58e787bb5a7fd38a7fe8 b45b79a5c882b86de434385293094007b93446ca LAST7 <last7617@outlook.com> 1678388479 +0800	commit: modified alpha.lua
+b45b79a5c882b86de434385293094007b93446ca d3578bf0bb16e9ab354803ef23daff69aa53aba9 LAST7 <last7617@outlook.com> 1678388485 +0800	checkout: moving from lazy to main
+d3578bf0bb16e9ab354803ef23daff69aa53aba9 b45b79a5c882b86de434385293094007b93446ca LAST7 <last7617@outlook.com> 1678388516 +0800	checkout: moving from main to lazy
+b45b79a5c882b86de434385293094007b93446ca a19818f4ee7649c100890fd92b11125e8c649946 LAST7 <last7617@outlook.com> 1678435911 +0800	commit: noice, notify, nui installed
+a19818f4ee7649c100890fd92b11125e8c649946 aaf18eaabac78a177f5e99b9f494786f4c27c3e8 LAST7 <last7617@outlook.com> 1678436115 +0800	commit: modified README.md
+aaf18eaabac78a177f5e99b9f494786f4c27c3e8 2b9083f45c49c9bb34fbe17a016c38a89ce2c177 LAST7 <last7617@outlook.com> 1678445984 +0800	commit: modified config for notify.nvim

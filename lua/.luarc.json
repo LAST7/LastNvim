@@ -2,6 +2,7 @@
     "diagnostics.globals": [
         "vim",
         "logo",
-        "lualine_palenight"
+        "lualine_palenight",
+        "_config"
     ]
 }

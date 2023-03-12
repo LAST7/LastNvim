@@ -14,18 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- local opts = {}
 
-require("lazy").setup("lazy-plugins")
+-- load plugins
+require("lazy").setup("plugins")
 
--- load essential plugins
-require("plugins.nvim-tree")
-require("plugins.lualine")
-require("plugins.nvim-cmp")
-require("plugins.autopairs")
-require("plugins.treesitter")
-require("plugins.bufferline")
-
-
-require("plugins.lsp.mason")
-require("plugins.lsp.lspconfig")
-require("plugins.lsp.null-ls")
-require("plugins.lsp.trouble")

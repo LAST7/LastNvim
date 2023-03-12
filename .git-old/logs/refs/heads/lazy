@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 d3578bf0bb16e9ab354803ef23daff69aa53aba9 LAST7 <last7617@outlook.com> 1678378394 +0800	branch: Created from main
+d3578bf0bb16e9ab354803ef23daff69aa53aba9 7af69b6f1b1364d9b2b0cbaffecc940f29894e66 LAST7 <last7617@outlook.com> 1678378473 +0800	commit: **CHANGED PACKER TO LAZY**
+7af69b6f1b1364d9b2b0cbaffecc940f29894e66 ce8b17133ae75a144515250456e0aa198f46913b LAST7 <last7617@outlook.com> 1678380995 +0800	commit: changed README.md
+ce8b17133ae75a144515250456e0aa198f46913b cb0769f39859fd0101eb58e787bb5a7fd38a7fe8 LAST7 <last7617@outlook.com> 1678385302 +0800	commit: add alpha
+cb0769f39859fd0101eb58e787bb5a7fd38a7fe8 b45b79a5c882b86de434385293094007b93446ca LAST7 <last7617@outlook.com> 1678388479 +0800	commit: modified alpha.lua
+b45b79a5c882b86de434385293094007b93446ca a19818f4ee7649c100890fd92b11125e8c649946 LAST7 <last7617@outlook.com> 1678435911 +0800	commit: noice, notify, nui installed
+a19818f4ee7649c100890fd92b11125e8c649946 aaf18eaabac78a177f5e99b9f494786f4c27c3e8 LAST7 <last7617@outlook.com> 1678436115 +0800	commit: modified README.md
+aaf18eaabac78a177f5e99b9f494786f4c27c3e8 2b9083f45c49c9bb34fbe17a016c38a89ce2c177 LAST7 <last7617@outlook.com> 1678445984 +0800	commit: modified config for notify.nvim
